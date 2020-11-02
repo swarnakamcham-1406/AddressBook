@@ -33,6 +33,66 @@ public class AddressBookImp implements AddressBookInterface {
 	}
 	
 	public void editPerson() {
+		 public void editPerson() {
+
+                int value=1;
+                Scanner edit = new Scanner(System.in);
+                for(PersonInfo p : persons) {
+                        System.out.println(p.toString());
+
+                System.out.println("enter the first name to edit the details");
+                String fname=edit.nextLine();
+          if(fname.equals(p.firstName)) {
+
+                  while(value==1) {
+                          System.out.println("enter option to edit the details");
+                          System.out.println("1.phone numer");
+                          System.out.println("2.city");
+                          System.out.println("3.state");
+                          System.out.println("4.zipcode");
+                          System.out.println("5.quit");
+
+                          Scanner newvalue=new Scanner(System.in);
+                          int choice=newvalue.nextInt();
+
+
+                          switch(choice) {
+
+                          case 1:
+                                  System.out.println("enter the new phone number");
+                                  String pnum=newvalue.nextLine();
+                                  p.setPhoneNumber(pnum);
+                                  System.out.println(p.toString());
+                                  break;
+                          case 2:
+                                  System.out.println("enter the new city");
+                                  String city=newvalue.nextLine();
+                                  p.setPhoneNumber(city);
+                                  System.out.println(p.toString());
+                                  break;
+                          case 3:
+                                  System.out.println("enter the new state");
+                                  String state=newvalue.nextLine();
+                                  p.setPhoneNumber(state);
+                                  System.out.println(p.toString());
+                                  break;
+                          case 4:
+				 System.out.println("enter the new zipcode");
+                                  String zcode=newvalue.nextLine();
+                                  p.setPhoneNumber(zcode);
+                                  System.out.println(p.toString());
+                                  break;
+                          case 5:
+                                  value=0;
+                                  break;
+
+                                  default:
+                                          System.out.println("you entered invalid option");
+                                          break;
+                          }
+                  }
+                }
+                }
 		
 	
 		
