@@ -100,6 +100,21 @@ public class AddressBookImp implements AddressBookInterface {
 
 	@Override
 	public void deletePerson() {
+			
+			 Scanner delete = new Scanner(System.in);
+                System.out.println("enter the first name to delete the details");
+                String name = delete.nextLine();
+                for(int i=0;i<persons.size();i++) {
+                                String fname = persons.get(i).firstName;
+                                if(name.equals(fname)) {
+                                        persons.remove(i);
+                                System.out.println("person details are deleted");
+                                }
+                                else {
+                                        System.out.println("first name is founr");
+                                }
+
+                }
 
 	}
 
