@@ -121,6 +121,12 @@ public class AddressBookImp implements AddressBookInterface {
 	@Override
 	public void sortByName() {
 		
+		 Collections.sort(persons, new NameComparator());
+                System.out.println("sorted list by name");
+                for(PersonInfo p : persons) {
+                        System.out.println(p.toString());
+
+                }
 			
 		
 	}
