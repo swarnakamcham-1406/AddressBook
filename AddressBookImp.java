@@ -133,6 +133,11 @@ public class AddressBookImp implements AddressBookInterface {
 
 	@Override
 	public void sortByZip() {
+		  Collections.sort(persons, new ZipComparator());
+                System.out.println("sorted list by name");
+                for(PersonInfo p : persons) {
+                        System.out.println(p.toString());
+                }
 		
 		
 			
