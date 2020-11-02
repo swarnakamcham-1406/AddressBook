@@ -146,6 +146,20 @@ public class AddressBookImp implements AddressBookInterface {
 	@Override
 	public void searchPerson() {
 		
+		 Scanner search = new Scanner(System.in);
+                System.out.println("enter the first name to search the details");
+                String fname = search.nextLine();
+                for(PersonInfo p : persons) {
+                        if(fname.equals(p.firstName)) {
+                        System.out.println(p.toString());
+                        }
+                        else {
+
+                                System.out.println("the firstname is not found");
+
+                        }
+
+                }
 			
 			
 		
@@ -154,6 +168,11 @@ public class AddressBookImp implements AddressBookInterface {
 	@Override
 	public void display() {
 	
+
+                for(PersonInfo p : persons) {
+                        System.out.println(p.toString());
+
+                }
 		
 	
 	}
